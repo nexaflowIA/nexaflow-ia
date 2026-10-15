@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10243a">
+  <title>NexaFlow IA | Tu negocio, más sencillo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">N</span><span>NexaFlow <b>IA</b></span></a>
+    <nav><a href="#funciones">Funciones</a><a href="#asistente">Asistente IA</a><a href="#contacto">Contacto</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy"><p class="eyebrow">SOLUCIONES INTELIGENTES PARA EMPRESAS</p><h1>Haz que tu negocio <span>avance.</span></h1><p class="lead">Organiza clientes, tareas y proyectos desde un solo lugar. Menos trabajo repetitivo, más tiempo para lo importante.</p><div class="hero-actions"><a class="button primary" href="#funciones">Descubrir funciones</a><a class="button ghost" href="#asistente">Probar asistente IA</a></div></div>
+      <div class="hero-panel"><div class="panel-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="panel-label">PANEL DE CONTROL</span></div><div class="panel-content"><p class="muted">Tu negocio, de un vistazo</p><div class="metric-grid"><div class="metric"><span>Clientes</span><strong>Organizados</strong></div><div class="metric"><span>Tareas</span><strong>En marcha</strong></div><div class="metric"><span>Proyectos</span><strong>Controlados</strong></div><div class="metric"><span>Asistente</span><strong>Disponible</strong></div></div><div class="progress-row"><span>Productividad</span><span>Más claridad cada día</span></div><div class="progress"><i></i></div></div></div>
+    </section>
+    <section class="section" id="funciones"><div class="section-heading"><p class="eyebrow">UNA FORMA MÁS FÁCIL DE TRABAJAR</p><h2>Todo más organizado.</h2><p>Herramientas sencillas para ayudarte a gestionar el día a día de tu empresa.</p></div><div class="cards"><article class="feature"><div class="feature-icon">◈</div><h3>Gestión de clientes</h3><p>Centraliza la información importante y ten tus contactos a mano.</p></article><article class="feature"><div class="feature-icon">✓</div><h3>Tareas y proyectos</h3><p>Ordena prioridades, sigue el progreso y evita que se te escape algo.</p></article><article class="feature"><div class="feature-icon">✦</div><h3>Asistente IA</h3><p>Obtén ayuda para redactar, organizar ideas y resolver consultas generales.</p></article></div></section>
+    <section class="assistant-section" id="asistente"><div class="assistant-intro"><p class="eyebrow">TU APOYO DIGITAL</p><h2>Habla con el asistente NexaFlow</h2><p>Escribe una pregunta o cuéntale qué necesitas preparar. No introduzcas contraseñas ni datos confidenciales.</p><div class="privacy-note">Tu clave de API debe configurarse en Netlify como variable <code>OPENAI_API_KEY</code>; nunca la escribas en esta página.</div></div><div class="chat-card"><div class="chat-header"><div class="avatar">N</div><div><strong>Asistente NexaFlow</strong><small>Ayuda para tu negocio</small></div><span class="online"></span></div><div id="messages" class="messages" aria-live="polite"><div class="message bot">¡Hola! Soy el asistente de NexaFlow IA. ¿En qué puedo ayudarte hoy?</div></div><form id="chat-form" class="chat-form"><label class="sr-only" for="question">Tu mensaje</label><textarea id="question" rows="2" placeholder="Escribe tu pregunta..." required></textarea><button class="button primary" type="submit">Enviar</button></form><p id="chat-status" class="chat-status">La respuesta requiere que la función de Netlify y la clave API estén configuradas.</p></div></section>
+    <section class="contact" id="contacto"><p class="eyebrow">HABLEMOS</p><h2>Da el siguiente paso con NexaFlow IA.</h2><p>Soluciones digitales con un trato profesional y cercano.</p><a class="button primary" href="tel:614293001">Llamar al 614 293 001</a></section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span class="brand-mark">N</span><span>NexaFlow <b>IA</b></span></a><span>© <span id="year"></span> NexaFlow IA</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
