@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10243a">
+<meta name="description" content="NexaFlow IA: organiza clientes, tareas, proyectos y agenda en un solo lugar.">
+<title>NexaFlow IA | Tu negocio, más sencillo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#inicio"><span class="brand-mark">N</span><span>NexaFlow <b>IA</b></span></a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+  <nav id="nav"><a href="#funciones">Funciones</a><a href="#gestion">Tu espacio</a><a href="#asistente">Asistente IA</a><a href="#contacto">Contacto</a></nav>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy"><span class="eyebrow">ORGANIZA · AVANZA · CRECE</span><h1>Haz que tu negocio <em>avance.</em></h1>
+  <p>Un espacio sencillo para organizar clientes, tareas, proyectos y agenda. Menos caos, más tiempo para lo importante.</p>
+  <div class="hero-actions"><a class="btn primary" href="#gestion">Empezar a organizar</a><a class="btn secondary" href="#funciones">Ver funciones</a></div>
+  <p class="small-note">Tus datos de trabajo se guardan en este navegador. Exporta una copia desde el panel.</p></div>
+  <div class="hero-card"><div class="card-top"><span class="status-dot"></span> TU PANEL DE CONTROL <span class="today" id="today"></span></div>
+  <div class="metric-grid"><div class="metric"><span>Tareas pendientes</span><strong id="hero-tasks">0</strong></div><div class="metric"><span>Proyectos</span><strong id="hero-projects">0</strong></div></div>
+  <div class="mini-title">Tu siguiente paso</div><div class="next-step" id="next-step">Añade tu primera tarea en el panel.</div>
+  <div class="progress"><span id="progress-bar"></span></div><div class="progress-label" id="progress-label">Empieza hoy, paso a paso.</div></div>
+</section>
+<section class="section" id="funciones"><div class="section-heading"><span class="eyebrow">TODO EN SU SITIO</span><h2>Lo que necesitas para avanzar</h2><p>Una base práctica para el día a día de cualquier tipo de empresa.</p></div>
+<div class="features"><article class="feature"><span class="feature-icon">◎</span><h3>Clientes</h3><p>Guarda contactos y una nota útil para cada relación comercial.</p></article><article class="feature"><span class="feature-icon">✓</span><h3>Tareas</h3><p>Apunta lo pendiente y marca lo que ya has terminado.</p></article><article class="feature"><span class="feature-icon">▦</span><h3>Proyectos</h3><p>Ten a mano el nombre, el estado y el siguiente paso de cada proyecto.</p></article><article class="feature"><span class="feature-icon">◷</span><h3>Agenda</h3><p>Organiza fechas importantes y evita que se te pase lo esencial.</p></article></div></section>
+<section class="section workspace" id="gestion"><div class="section-heading"><span class="eyebrow">TU ESPACIO DE TRABAJO</span><h2>Empieza con lo que tienes hoy</h2><p>Añade información y mantenla organizada desde tu móvil o tu ordenador.</p></div>
+<div class="workspace-grid">
+<article class="panel"><div class="panel-heading"><div><span class="panel-kicker">RELACIONES</span><h3>Clientes</h3></div><span class="panel-icon">◎</span></div><form id="client-form" class="compact-form"><input name="name" placeholder="Nombre del cliente" required maxlength="100"><input name="contact" placeholder="Teléfono o correo (opcional)" maxlength="160"><input name="note" placeholder="Nota (opcional)" maxlength="240"><button class="btn primary" type="submit">Añadir cliente</button></form><div id="clients-list" class="items"></div></article>
+<article class="panel"><div class="panel-heading"><div><span class="panel-kicker">PRÓXIMAS ACCIONES</span><h3>Tareas</h3></div><span class="panel-icon">✓</span></div><form id="task-form" class="compact-form"><input name="title" placeholder="¿Qué necesitas hacer?" required maxlength="180"><div class="form-row"><input name="due" type="date" aria-label="Fecha límite"><select name="priority" aria-label="Prioridad"><option value="Normal">Prioridad normal</option><option value="Alta">Prioridad alta</option></select></div><button class="btn primary" type="submit">Añadir tarea</button></form><div id="tasks-list" class="items"></div></article>
+<article class="panel"><div class="panel-heading"><div><span class="panel-kicker">EN MARCHA</span><h3>Proyectos</h3></div><span class="panel-icon">▦</span></div><form id="project-form" class="compact-form"><input name="title" placeholder="Nombre del proyecto" required maxlength="180"><input name="next" placeholder="Siguiente paso (opcional)" maxlength="180"><button class="btn primary" type="submit">Añadir proyecto</button></form><div id="projects-list" class="items"></div></article>
+<article class="panel"><div class="panel-heading"><div><span class="panel-kicker">FECHAS IMPORTANTES</span><h3>Agenda</h3></div><span class="panel-icon">◷</span></div><form id="event-form" class="compact-form"><input name="title" placeholder="Nombre de la cita o evento" required maxlength="180"><div class="form-row"><input name="date" type="date" aria-label="Fecha" required><input name="time" type="time" aria-label="Hora"></div><button class="btn primary" type="submit">Añadir a la agenda</button></form><div id="events-list" class="items"></div></article>
+</div>
+<div class="data-actions"><button class="btn secondary" id="export-data">Descargar copia de mis datos</button><button class="btn secondary" id="import-button">Importar copia</button><input id="import-file" type="file" accept="application/json,.json" hidden><button class="btn danger-ghost" id="clear-data">Borrar los datos de este navegador</button><p id="data-message" role="status"></p></div>
+</section>
+<section class="section assistant-section" id="asistente"><div class="assistant-intro"><span class="eyebrow">ASISTENTE DE NEXAFLOW IA</span><h2>Una ayuda para ordenar tus ideas</h2><p>Pregunta cómo priorizar tareas, preparar un correo o estructurar un proyecto. Si no hay conexión con una IA externa, te ofrecerá ayuda básica sin coste de API.</p><p class="small-note">Aviso: la ayuda básica funciona sin clave ni pagos, pero no es una IA generativa completa. Para respuestas generativas reales hace falta conectar un proveedor compatible.</p></div>
+<div class="chat-box"><div class="chat-header"><span class="chat-avatar">N</span><div><strong>Asistente NexaFlow</strong><small id="chat-status">Disponible para ayudarte</small></div><span class="online-dot"></span></div><div id="messages" class="messages" aria-live="polite"><div class="message bot">¡Hola! Soy el asistente de NexaFlow IA. Puedo ayudarte a ordenar tareas, preparar textos y planificar proyectos. ¿Qué necesitas resolver hoy?</div></div><form id="chat-form" class="chat-form"><input id="question" name="message" placeholder="Escribe tu pregunta…" autocomplete="off" maxlength="6000" required><button class="btn primary" type="submit">Enviar ↗</button></form><p class="chat-foot">No compartas contraseñas ni datos bancarios.</p></div></section>
+<section class="contact-band" id="contacto"><div><span class="eyebrow">NEXAFLOW IA</span><h2>Un paso cada vez.</h2><p>Empieza organizando el trabajo de hoy. Puedes ampliar la herramienta a medida que tu negocio crezca.</p></div><a class="btn light" href="#gestion">Abrir mi espacio</a></section>
+</main>
+<footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">N</span><span>NexaFlow <b>IA</b></span></a><span>© <span id="year"></span> NexaFlow IA · Organiza tu negocio con claridad.</span></footer>
+<script src="app.js"></script>
+</body></html>

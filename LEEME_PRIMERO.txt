@@ -1,0 +1,27 @@
+NEXAFLOW IA — PAQUETE COMPLETO
+
+Este paquete incluye:
+- index.html: página principal
+- styles.css: diseño adaptable a móvil y ordenador
+- app.js: panel de clientes, tareas, proyectos, agenda y asistente
+- netlify.toml: configuración de publicación
+- netlify/functions/chat.js: función opcional para conectar la API de OpenAI
+
+IMPORTANTE SOBRE LA IA Y LOS COSTES
+La web y el panel básico funcionan sin configurar una API de pago. El asistente ofrece respuestas de ayuda básica en local. Para tener respuestas generativas completas, hay que configurar un proveedor de IA y su clave de forma segura en Netlify; puede tener costes según el proveedor y el uso. No incluyas claves secretas en los archivos.
+
+CÓMO PUBLICAR EN TU PROYECTO ACTUAL
+1. Descomprime este ZIP.
+2. En tu proyecto actual de GitHub, sube los archivos y carpetas manteniendo EXACTAMENTE esta estructura.
+3. La carpeta netlify debe contener la carpeta functions, y dentro chat.js.
+4. Confirma los cambios en el mismo repositorio que ya tienes.
+5. Netlify debe publicar el proyecto desde ese repositorio o debes subir el contenido completo mediante Netlify Drop. Si usas Drop, sube los archivos descomprimidos, no el ZIP.
+6. Tras publicar, abre la web y prueba añadir un cliente, una tarea, un proyecto y una cita. Los datos se guardan en el navegador de ese dispositivo.
+
+PRIVACIDAD Y COPIAS
+- Los datos de clientes, tareas, proyectos y agenda se guardan localmente en el navegador de ese dispositivo, no en una base de datos compartida.
+- Usa “Descargar copia de mis datos” para guardar una copia JSON en Archivos.
+- Si borras los datos del navegador o cambias de dispositivo, podrías perderlos si no tienes una copia.
+- Esta versión no tiene inicio de sesión ni sincronización entre empleados.
+
+Este paquete está preparado con los nombres de archivo correctos y una estructura compatible con la configuración incluida. La publicación final debe comprobarse en Netlify; no se puede garantizar el estado de una cuenta externa desde este ZIP.
